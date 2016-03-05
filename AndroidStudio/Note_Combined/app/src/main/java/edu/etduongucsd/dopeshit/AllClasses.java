@@ -75,6 +75,15 @@ public class AllClasses extends AppCompatActivity implements SearchView.OnQueryT
         myList = (ExpandableListView) findViewById(R.id.allClassesExpList);
         listAdapter = new MyListAdapter(AllClasses.this, courseList);
         myList.setAdapter(listAdapter);
+
+        myList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                openProfList(v);
+                return true;
+            }
+        });
+
         /*myList.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
@@ -165,8 +174,11 @@ public class AllClasses extends AppCompatActivity implements SearchView.OnQueryT
         UCSD_classList = new ClassList("Rady Management", listOfClasses);
         courseList.add(UCSD_classList);
 */
+    }
 
-
+    public void openProfList(View view) {
+        Intent moveToProfList = new Intent(this, ProfList.class);
+        startActivity(moveToProfList);
     }
 
     @Override

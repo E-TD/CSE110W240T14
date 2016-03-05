@@ -122,6 +122,7 @@ public class MyClasses extends AppCompatActivity {
                         int numLecs = classSel.getNumLec();
                         //Toast.makeText(MyClasses.this, "Class: " + classSelected + " has " + numLecs + " lectures.", Toast.LENGTH_LONG).show();
                         openLectureList(view);
+                        //asahldsajajahfjfejlfewhfewwe
                         //openLectureList();
                     }
                 }

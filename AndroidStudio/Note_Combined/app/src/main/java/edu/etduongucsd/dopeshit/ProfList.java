@@ -74,4 +74,9 @@ public class ProfList extends AppCompatActivity {
             }
         });
     }
+
+    public void profToLec(View view) {
+        Intent pToLecureList = new Intent(this, LectureList.class);
+        startActivity(pToLecureList);
+    }
 }
